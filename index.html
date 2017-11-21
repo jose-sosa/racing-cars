@@ -50,11 +50,14 @@
 
 
        <p class = "text3">Choose Your Attributes (total of 10):</p>
-         <input type="text" class = "textbox" id="velocity-input" placeholder="Velocity">
+         <input type="number" min="1" max="10" class = "attributes" id="velocity-input" placeholder="Velocity">
 
-         <input type="text" class = "textbox" id="acceleration-input" placeholder="Acceleration">
 
-         <input type="text" class = "textbox" id="takeoff-input" placeholder="Takeoff">
+         <input type="number" min="1" max="10" class = "attributes" id="acceleration-input" placeholder="Acceleration">
+
+
+         <input type="number" min="1" max="10" class = "attributes" id="takeoff-input" placeholder="Takeoff">
+
 
 
 
@@ -94,7 +97,7 @@
 
       </div>
 
-      <div id="announcement" class="results">
+      <div id="announcement" class="results hidden">
 
 
       </div>
