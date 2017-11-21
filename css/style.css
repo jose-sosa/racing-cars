@@ -9,9 +9,6 @@ html{
 .racing1{
   width:200px;
   height:100px;
-  background-image: url("../images/car1.png");
-  background-size:cover;
-  background-position: center;
   position:fixed;
   transform:rotate(-90deg);
 }
@@ -24,9 +21,6 @@ html{
 .racing2{
   width:200px;
   height:100px;
-  background-image: url("../images/car2.png");
-  background-size:cover;
-  background-position: center;
   position:fixed;
   bottom:10%;
   right:2%;
@@ -43,8 +37,6 @@ html{
   font-size:2rem;
   cursor:crosshair;
 }
-
-
 
 .caranim2{
   animation: caranim2 3s linear forwards;
@@ -93,11 +85,75 @@ html{
   opacity:.8;
 }
 
-/*.caranim1{
-  animation: caranim1 3s linear forwards;
+.hidden{
+  display:none;
 }
 
-@keyframes caranim1{
-  100%{bottom:70%}
-  }
-}*/
+.chooseyourcar{
+  text-align: center;
+
+}
+
+.submitbutton{
+  width:300px;
+  height:50px;
+  background:gray;
+  color:gold;
+  outline:none;
+  cursor:cell;
+  font-size:1rem;
+  margin-top:25px;
+}
+
+.text1{
+  font-size: 2rem;
+}
+
+.text2{
+  font-size: 2rem;
+}
+
+.text3{
+  font-size: 2rem;
+}
+
+.radiobutton{
+  margin-left:25px;
+  margin-right:5px;
+}
+
+
+.colororange{
+  background-image: url("../images/orangecar.png");
+  background-size:cover;
+  background-position: center;
+}
+
+.coloraqua{
+  background-image: url("../images/aquacar.png");
+  background-size:cover;
+  background-position: center;
+}
+
+.colorblue{
+  background-image: url("../images/bluecar.png");
+  background-size:cover;
+  background-position: center;
+}
+.colorpurple{
+  background-image: url("../images/purplecar.png");
+  background-size:cover;
+  background-position: center;
+}
+
+.colorred{
+  background-image: url("../images/redcar.png");
+  background-size:cover;
+  background-position: center;
+}
+
+.colorwhite{
+  background-image: url("../images/whitecar.png");
+  background-size:cover;
+  background-position: center;
+}

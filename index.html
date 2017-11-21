@@ -13,47 +13,93 @@
   </head>
 
   <body>
-    <button id= "startrace"class="race">
-      Race!
-    </button>
+    <div id = "divlay"  class = "chooseyourcar">
+
+     <div class ="divlayouts">
+
+       <p class = "text1">Choose Your Color:</p>
+
+         <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorred">
+          Red
+         <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorblue">
+          Blue
+         <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colororange">
+          Orange
+          <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "coloraqua">
+           Aqua
+          <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorpurple">
+           Purple
+          <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorwhite">
+           White
+
+
+       <p class = "text2">Choose the Computer's Color:</p>
+          <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colorred">
+           Red
+          <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colorblue">
+           Blue
+          <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colororange">
+           Orange
+           <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "coloraqua">
+            Aqua
+           <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colorpurple">
+            Purple
+           <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colorwhite">
+            White
 
 
 
+       <p class = "text3">Choose Your Attributes (total of 10):</p>
+         <input type="text" class = "textbox" id="velocity-input" placeholder="Velocity">
+
+         <input type="text" class = "textbox" id="acceleration-input" placeholder="Acceleration">
+
+         <input type="text" class = "textbox" id="takeoff-input" placeholder="Takeoff">
 
 
 
+       <br>
 
+       <button id="submit-information" class = "submitbutton">SUBMIT & GET READY TO MASH THAT RACE BUTTON</button>
 
-
-
-
-
-    <div id="racer1" class="racing1 racing1-2">
+      </div>
 
     </div>
 
-    <div id="racer2" class="racing2">
+
+
+
+
+    <div id = "race-plat" class="raceplatform hidden">
+
+      <button id= "startrace"class="race">
+        Race!
+      </button>
+
+      <div id="racer1" class="racing1 racing1-2">
+
+      </div>
+
+      <div id="racer2" class="racing2">
+
+      </div>
+
+      <div class="comp1">
+        COMPUTER
+
+      </div>
+
+      <div class="player1">
+        PLAYER 1
+
+      </div>
+
+      <div id="announcement" class="results">
+
+
+      </div>
 
     </div>
-
-    <div class="comp1">
-      COMPUTER
-
-    </div>
-
-    <div class="player1">
-      PLAYER 1
-
-    </div>
-
-    <div id="announcement" class="results">
-
-
-    </div>
-
-
-
-
 
     <script src = "js/script.js"></script>
   </body>
