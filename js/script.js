@@ -36,9 +36,6 @@ raceStart.addEventListener("click",function(event){
     } else if ( inc < 70 ) {
         announceWinner.textContent = "COMPUTER WINS";
     }} ,3000);
-
-
-
 });
 
 
