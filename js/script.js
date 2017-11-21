@@ -119,4 +119,6 @@ raceStart.addEventListener("click",function(event){
       announceWinner.classList.remove("hidden");
     } ,3000);
 
+  setTimeout(function(){location.reload();},5000)
+
 });
