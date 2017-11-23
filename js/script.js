@@ -122,3 +122,139 @@ raceStart.addEventListener("click",function(event){
   setTimeout(function(){location.reload();},5000)
 
 });
+
+//============================================================================
+
+
+
+
+class CreditCard {
+
+
+  constructor(cN,rT,rE,bB,bBM,yB){
+    this.cardName = cN;
+    this.rateTravel = rT;
+    this.rateEverything = rE;
+    this.bigBonus = bB;
+    this.bigBonusMinimum = bBM;
+    this.yearlyBudget = yB;
+    this.travelSpent;
+    this.everythingSpent;
+    this.maximumRate = Math.max(this.rateTravel,this.rateEverything);
+
+    }
+
+  yearlyReturn (moneySpent) {
+
+    if (moneySpent< this.bigBonus){
+      var ret= moneySpent*rateEverything;
+      return(ret);
+    } else {
+      var ret= this.bigBonusMinimum + moneySpent*this.rateEverything;
+      return(ret);
+    }
+
+ }
+}
+
+
+
+card1 = new CreditCard("AMEX",.03,.01,0,0,1400);
+card2 = new CreditCard("DISCOVER",0,.02,100,500,1400);
+card3 = new CreditCard("BOFA",.01,.01,200,1400,300);
+
+
+
+var maxTravelRate = Number( Math.max(card1.rateTravel,card2.rateTravel,card3.rateTravel) );
+
+
+var maxEverythingRate = Number( Math.max(card1.rateEverything,card2.rateEverything,card3.rateEverything) );
+
+
+
+var maxRate = Math.max(maxTravelRate,maxEverythingRate);
+
+
+
+
+
+
+
+
+
+
+var totalYearlyBudget = 2000;
+var yearlyTravelBudget;
+var yearlyEverthingBudget;
+var travelSpent;
+var everythingSpent;
+
+
+
+
+
+
+var worthIt;
+
+function bonusWorthIt (card){
+  if (card.yearlyBudget < card.bigBonusMinimum) {
+      worthIt=false;
+      return(worthIt);
+      }
+    else if (card.bigBonusMinimum * maxRate < ( (card.bigBonusMinimum * card.rateEverything) + card.bigBonus ) ) {
+      worthIt =true;
+      return(worthIt);
+      }
+    else{
+    worthIt=false;
+    return(worthIt);
+    }
+}
+
+bonusWorthIt(card1);
+bonusWorthIt(card2);
+bonusWorthIt(card3);
+
+console.log(bonusWorthIt(card1));
+console.log(bonusWorthIt(card2));
+console.log(bonusWorthIt(card3));
+console.log(card3.maximumRate);
+
+
+function allocate(card){
+
+    if (bonusWorthIt(card) == false){
+      if(card.maximumRate == maxRate){
+        card.yearlyBudget = totalYearlyBudget;
+        console.log( ("You should spend $" + card.yearlyBudget + " on " + card.cardName ) );
+        return(card.yearlyBudget);
+      } else{
+        card.yearlyBudget = 0;
+        console.log( ("You should spend $" + card.yearlyBudget + " on " + card.cardName ) );
+        return(card.yearlyBudget);
+      }
+
+    }
+
+    else {
+      console.log("fubar");
+
+      if (card.maximumRate == maxRate){
+        card.yearlyBudget = totalYearlyBudget;
+        console.log( ("You should spend $" + card.yearlyBudget + " on " + card.cardName ) );
+        return(card.yearlyBudget);
+      } else{
+          card.yearlyBudget = card.bigBonusMinimum;
+          totalYearlyBudget = Number(totalYearlyBudget - card.bigBonusMinimum );
+          console.log( ("You should spend $" + card.yearlyBudget + " on " + card.cardName ) );
+          return(card.yearlyBudget);
+
+        }
+      }
+
+}
+
+
+console.log(allocate(card1));
+console.log(allocate(card2));
+console.log(allocate(card3));
