@@ -13,7 +13,59 @@
   </head>
 
   <body>
-    <div id = "divlay"  class = "chooseyourcar">
+
+    <!-- <div class="racingcaranimation">
+
+      <div class="rca1">
+
+        <div class="rca1-1">
+
+        </div>
+
+        <div class="rca1-2">
+
+        </div>
+
+        <div class="rca1-3">
+
+        </div>
+
+        <div class="rca1-4">
+
+        </div>
+
+        <div class="rca1-5">
+
+        </div>
+
+        <div class="rca1-6">
+
+        </div>
+
+      </div>
+
+      <div class="rca2">
+
+      </div>
+
+      <div class="rca3">
+
+      </div>
+
+      <div class="rca4">
+
+      </div>
+
+
+
+
+
+
+    </div> -->
+
+
+
+    <div id= "divlay"  class = "chooseyourcar">
 
      <div class ="divlayouts">
 
@@ -29,7 +81,7 @@
            Aqua
           <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorpurple">
            Purple
-          <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorwhite">
+          <input type="radio" name ="playercolor" class = "radiobutton" id="player-car-input" value = "colorwhite" checked>
            White
 
 
@@ -38,7 +90,7 @@
            Red
           <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colorblue">
            Blue
-          <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colororange">
+          <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "colororange" checked>
            Orange
            <input type="radio" name ="compcolor" class = "radiobutton" id="comp-car-input" value = "coloraqua">
             Aqua
@@ -49,19 +101,19 @@
 
 
 
-       <p class = "text3">Choose Your Attributes (total of 10):</p>
-         <input type="number" min="1" max="10" class = "attributes" id="velocity-input" placeholder="Velocity">
+       <p class = "text3"> Select the Difficulty:</p>
+       <input type="radio" name ="difficulty" class = "radiobutton2" id="difficulty-input" value = "easy" >
+        Easy
+       <input type="radio" name ="difficulty" class = "radiobutton2" id="difficulty-input" value = "medium" >
+        Medium
+       <input type="radio" name ="difficulty" class = "radiobutton2" id="difficulty-input" value = "hard" >
+        Hard
+       <input type="radio" name ="difficulty" class = "radiobutton2" id="difficulty-input" value = "bat shit crazy" checked>
+        Crazy InZanE
 
 
-         <input type="number" min="1" max="10" class = "attributes" id="acceleration-input" placeholder="Acceleration">
+      <br>
 
-
-         <input type="number" min="1" max="10" class = "attributes" id="takeoff-input" placeholder="Takeoff">
-
-
-
-
-       <br>
 
        <button id="submit-information" class = "submitbutton">SUBMIT & GET READY TO MASH THAT RACE BUTTON</button>
 
@@ -99,6 +151,10 @@
 
       <div id="announcement" class="results hidden">
 
+
+      </div>
+
+      <div class="raceline">
 
       </div>
 
